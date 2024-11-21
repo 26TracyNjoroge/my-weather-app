@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <form class="search-form" id="search-form">
+            <input type="search" placeholder="Enter a city" required class="search-form-input" id="search-form-input"/>
+            <input type="submit" value="Search" class="search-form-btn">
+        </form>
+    </header>
+    <main>
+        <div class="weather-app-data">
+            <div>
+            <h1 class="weather-app-city" id="weather-app-city"></h1>
+                <p class="weather-app-details"><span id="weather-date"></span>, <span id="weather-description">moderate rain</span> <br/>
+                    Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
+                </p>
+            </div>
+            <div class="weather-app-temperature">
+                <div id="icon"></div>
+                <div class="weather-temperature-value" id="weather-temperature-value"></div>
+                <div class="weather-temperature-unit">°C</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Coded by 
+            <a href="https://github.com/26TracyNjoroge" target="_blank">Tracy Wangari</a> and is on 
+            <a href="https://github.com/26TracyNjoroge/shecodes-weather-app-project" target="_blank">Github</a> and hosted on 
+            <a href="https://shecodes-weather-app-project.vercel.app/" target="_blank">Vercel</a>.
+        </p>
+    </footer>
+    </div> <!--End of container-->
+    <script src="script.js"></script>
+</body>
+</html>
