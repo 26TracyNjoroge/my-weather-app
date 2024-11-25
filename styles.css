@@ -61,7 +61,7 @@ a:hover {
     border-radius: 9px;
     padding: 15px 20px;
     width: 76%;
-    color: white;
+    color: var(--white);
 }
 
 ::placeholder {
@@ -75,11 +75,11 @@ a:hover {
     padding: 13px 28px;
     border-radius: 6px;
     margin-left: 5px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .search-form-btn:hover {
-    background-color: white;
+    background-color: var(--white);
     color: #9872A3;
     cursor: pointer;
 }
@@ -96,7 +96,7 @@ a:hover {
 }
 
 .weather-app-details {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 26px;
 }
 
@@ -116,13 +116,13 @@ a:hover {
 }
 
 .weather-temperature-value {
-    font-size: 88px;
+    font-size: 5.5rem;
     line-height: 88px;
 }
 
 .weather-temperature-unit {
     margin-top: 6px;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 .temp {
@@ -132,7 +132,7 @@ a:hover {
 footer {
     border-top: 1px solid var(--blue-input);
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     padding: 30px 0 0 0;
 }
 
@@ -170,13 +170,13 @@ footer {
     }
 
     .weather-temperature-value {
-        font-size: 56px;
+        font-size: 3.5rem;
         line-height: 30px;
     }
     
     .weather-temperature-unit {
         margin-top: 5px;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .weather-icon {
