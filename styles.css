@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* Base colors*/
+    --white: #FFFFFF;
+
+     /* Highlights/Emphasis */
+    --yellow-text: #F1C40F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-image: url(images/clouds2.avif);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+
+main {
+    padding: 30px 0;
+}
+
+a {
+    color: var(--yellow-text);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--yellow-text);
+    text-decoration: underline;
+}
+
+.container {
+    width: 620px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-form {
+    margin-bottom: 28px;
+
+}
+
+.search-form-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 9px;
+    padding: 15px 20px;
+    width: 76%;
+    color: white;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+.search-form-btn {
+    background-color: gray;
+    color: var(--white);
+    border: none;
+    padding: 13px 28px;
+    border-radius: 6px;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.search-form-btn:hover {
+    background-color: white;
+    color: #9872A3;
+    cursor: pointer;
+}
+
+.weather-app-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-app-city {
+    margin-bottom: 18px;
+    font-size: 38px;
+    line-height: 48px;
+}
+
+.weather-app-details {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.weather-app-details strong{
+    color: var(--yellow-strong-text);
+}
+
+.weather-app-temperature {
+    display: flex;
+    margin-top: 24px;
+    justify-content: flex-end;
+}
+
+.weather-icon {
+    width: 88px;
+    height: 88px;
+}
+
+.weather-temperature-value {
+    font-size: 88px;
+    line-height: 88px;
+}
+
+.weather-temperature-unit {
+    margin-top: 6px;
+    font-size: 28px;
+}
+
+footer {
+    border-top: 1px solid var(--blue-input);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 30px 0 0 0;
+}
