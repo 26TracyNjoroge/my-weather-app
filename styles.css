@@ -43,10 +43,10 @@ a:hover {
 }
 
 .container {
-    width: 620px;
+    width: 680px;
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    padding: 36px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -101,7 +101,7 @@ a:hover {
 }
 
 .weather-app-details strong{
-    color: var(--yellow-strong-text);
+    color: var(--yellow-text);
 }
 
 .weather-app-temperature {
@@ -125,6 +125,10 @@ a:hover {
     font-size: 28px;
 }
 
+.temp {
+    display: flex;
+}
+
 footer {
     border-top: 1px solid var(--blue-input);
     text-align: center;
@@ -133,11 +137,6 @@ footer {
 }
 
 @media (max-width: 530px) {
-    .search-form-btn {
-        margin-top: 0; 
-        font-size: 0.9rem;
-    } 
-
     .search-form {
         display: flex;
         flex-direction: column;
@@ -145,6 +144,11 @@ footer {
         gap: 10px;
 
     }
+    .search-form-btn {
+        margin-top: 0; 
+        font-size: 0.9rem;
+    } 
+
     .search-form-input {
         width: 100%;
     }
@@ -154,5 +158,30 @@ footer {
         align-items: center;
         justify-content: space-between;
     }
-   
+
+    .weather-app-temperature {
+        display: flex;
+        flex-direction: column;
+        margin-top: -32px;
+    }
+
+    .temp {
+        display: flex;
+    }
+
+    .weather-temperature-value {
+        font-size: 56px;
+        line-height: 30px;
+    }
+    
+    .weather-temperature-unit {
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    .weather-icon {
+        width: 88px;
+        height: 88px;
+        margin-left: -14px;
+    }
 }
