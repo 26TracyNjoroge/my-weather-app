@@ -50,6 +50,8 @@ a:hover {
 }
 
 .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
     width: 680px;
     border-radius: 16px;
     background: var(--black-opacity-50);
