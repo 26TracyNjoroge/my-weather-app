@@ -1,3 +1,4 @@
+const apiKey = "db90o24154efb0eb442t9a7ef39fdafd"; // Declare the API key once
 const cityEl = document.querySelector("#weather-app-city");
 const searchFormEl = document.querySelector("#search-form");
 
@@ -10,8 +11,6 @@ function updateWeather(response) {
     let dateEl = document.querySelector("#weather-date");
     let cityEl = document.querySelector("#weather-app-city");
 
-
-    // console.log(response.data)
     let timestamp = response.data.time
     let date = new Date(timestamp * 1000);
 
@@ -59,7 +58,6 @@ function formatDate(date) {
 }
 
 function searchCity(city) {
-    let apiKey = "db90o24154efb0eb442t9a7ef39fdafd";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(updateWeather);
  }
@@ -78,7 +76,6 @@ function formatDay(timestamp) {
 }
 
 function getForecast(city) {
-    let apiKey = "db90o24154efb0eb442t9a7ef39fdafd";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`
     axios.get(apiUrl).then(displayForecast);
 }
