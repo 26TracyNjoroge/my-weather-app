@@ -29,6 +29,8 @@ function updateWeather(response) {
     iconEl.innerHTML = icon;
     cityEl.innerHTML = city;
     dateEl.innerHTML = formatDate(date);
+
+    getForecast(city);
 }
 
 function formatDate(date) {
@@ -68,21 +70,36 @@ function handleSearchSubmit(event) {
     searchCity(inputValue)
 }
 
-function displayForecast() {
-    let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+    return days[date.getDay()];
+}
+
+function getForecast(city) {
+    let apiKey = "db90o24154efb0eb442t9a7ef39fdafd";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`
+    axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
     let forecastHtml = "";
 
-    days.forEach(function (day) {
+    response.data.daily.forEach(function (day, index) {
+        if (index < 5) {
         forecastHtml += `
-        <div class="weather-forecast-day">
-            <div class="weather-forecast-date">${day}</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-                <div class="weather-forecast-date"><strong>15º</strong></div>
-                <div class="weather-forecast-date">9º</div>
+            <div class="weather-forecast-day">
+                <div class="weather-forecast-date">${formatDay(day.time)}</div>
+                <img src="${day.condition.icon_url}"class="weather-forecast-icon"/>
+                <div class="weather-forecast-temperatures">
+                    <div class="weather-forecast-date"><strong>${Math.round(day.temperature.maximum)}</strong>º</div>
+                    <div class="weather-forecast-date">${Math.round(day.temperature.minimum)}º</div>
+                </div>
             </div>
-        </div>
         `;
+        }
+        
     })
 
     let forecastEl = document.querySelector("#forecast");
@@ -92,5 +109,5 @@ function displayForecast() {
 searchFormEl.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Nairobi");
-displayForecast();
+
 
