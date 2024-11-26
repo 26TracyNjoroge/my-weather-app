@@ -13,7 +13,7 @@ A simple weather application that displays current weather and a 5-day forecast 
 * HTML, CSS, JavaScript
 * Axios for API requests
 
-### Links
+### Project Links
 
 - Github Repository: [Repository](https://github.com/26TracyNjoroge/my-weather-app)
 - Live Site URL: [Live Demo](https://my-weather-app-wheat-six.vercel.app/)
