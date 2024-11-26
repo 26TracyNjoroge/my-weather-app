@@ -68,7 +68,29 @@ function handleSearchSubmit(event) {
     searchCity(inputValue)
 }
 
+function displayForecast() {
+    let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+    let forecastHtml = "";
+
+    days.forEach(function (day) {
+        forecastHtml += `
+        <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-date"><strong>15º</strong></div>
+                <div class="weather-forecast-date">9º</div>
+            </div>
+        </div>
+        `;
+    })
+
+    let forecastEl = document.querySelector("#forecast");
+    forecastEl.innerHTML = forecastHtml;
+}
+
 searchFormEl.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Nairobi");
+displayForecast();
 
